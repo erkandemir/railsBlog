@@ -6,6 +6,10 @@ class PostsController < ApplicationController
   		@post = Post.find(params[:id])
 	end
 
+	def index
+  		@posts = Post.all
+	end
+
 	def create
 		#render text: params[:post].inspect
 	 	@post = Post.new(post_params)
